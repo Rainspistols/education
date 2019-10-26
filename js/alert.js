@@ -1,10 +1,17 @@
-"use strict"
+"use strict";
 
-
-function monkeyCount(n) {
-  var monkeys = [];
-  for(var i=1; i<n+1; i++){
-    monkeys.push(i);
+function longestConsec(strarr, k) {
+  var longest = "";
+  for (var i = 0; k > 0 && i <= strarr.length - k; i++) {
+    var tempArray = strarr.slice(i, i + k);
+    var tempStr = tempArray.join("");
+    if (tempStr.length > longest.length) {
+      longest = tempStr;
+    }
   }
-  return monkeys;
- }
+  console.log(longest);
+}
+
+longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2);
+
+SVGPathSegLinetoHorizontalRel

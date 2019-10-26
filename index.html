@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <p>Впиши строку</p>
+    <input id="input" type="text" name="str" onchange="splitWords()" />
+    <p id="result">Результат: </p>
 
-<body>
-  <div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
- </div>
+    <!-- <form action="https://echo.htmlacademy.ru" method="get">
+      <label
+        >Name<input
+          id="name"
+          name="name"
+          type="text"
+          onchange="nameCheck()"
+          required
+      /></label>
+      <label
+        >num of cakes<input
+          id="cakeNum1"
+          name="num of cakes"
+          type="number"
+          onchange="calcPrice()"
+      /></label>
+      <label
+        >num of cakes2<input
+          id="cakeNum2"
+          name="num of cakes2"
+          type="number"
+          onchange="calcPrice()"
+      /></label>
+      <label>time to w8<input id="timetow8" name="time" type="number"/></label>
+      <label>Subtotal<input id="Subtotal" name="Subtotal" type="text"/></label>
+      <label
+        >Tax<input id="tax-input" name="tax" type="text" step="0.01"
+      /></label>
+      <label
+        >Total<input id="total-input" name="total" type="text" step="0.01"
+      /></label>
+      <button id="submit">Давай</button>
+    </form>
 
-  <script src="js/alert.js"></script>
-</body>
+    <img
+      src="img/rock.jpg"
+      id="rock"
+      alt=""
+      width="200px"
+      onload="resizeRock()"
+      onclick="changeRock()"
+    /> -->
 
+    <script src="js/alert.js"></script>
+  </body>
 </html>
