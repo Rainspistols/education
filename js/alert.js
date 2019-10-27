@@ -1,5 +1,4 @@
-"use stric";
-"use stric"
+'use strict'
 
 function longestConsec(strarr, k) {
   var longest = "";
