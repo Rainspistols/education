@@ -14,6 +14,4 @@ function longestConsec(strarr, k) {
 
 longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2);
 
-SVGPathSegLinetoHorizontalRel
-dwadwadwadwd wddd
-dwadwadwadwd
+test test test dwd
