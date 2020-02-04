@@ -1,17 +1,7 @@
-'use strict'
-
-function longestConsec(strarr, k) {
-  var longest = "";
-  for (var i = 0; k > 0 && i <= strarr.length - k; i++) {
-    var tempArray = strarr.slice(i, i + k);
-    var tempStr = tempArray.join("");
-    if (tempStr.length > longest.length) {
-      longest = tempStr;
-    }
-  }
-  console.log(longest);
+"use strict";
+let truncate = (str, length) =>{
+  return str.length <= length? str: str.slice(0,length+1) + '...'
 }
 
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2);
-
-test test test dwd
+console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
+console.log(truncate("Всем привет!", 20));
