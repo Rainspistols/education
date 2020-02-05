@@ -1,7 +1,14 @@
 "use strict";
-let truncate = (str, length) =>{
-  return str.length <= length? str: str.slice(0,length+1) + '...'
+
+function getMaxSubSum(arr) {
+  let curSum = 0;
+  let maxSum = 0;
+  for (let num of arr) {
+    curSum += num;
+    maxSum = Math.max(curSum, maxSum);
+    if (curSum < 0) curSum = 0;
+  }
+  return maxSum;
 }
 
-console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
-console.log(truncate("Всем привет!", 20));
+console.log(getMaxSubSum([-1, 2, 3, -9]));
