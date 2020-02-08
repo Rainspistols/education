@@ -1,27 +1,18 @@
 "use strict";
 
-function unique(arr) {
-  let result = [];
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
-  arr.forEach(str => {
-    if (!result.includes(str)) {
-      result.push(str);
-    }
-  });
-
-  return result;
+function aclean(arr) {
+  let result = new Map();
+  for (let str of arr) {
+    let newProp = str
+      .toLowerCase()
+      .split("")
+      .sort()
+      .join("");
+    result.set(newProp, str);
+  }
+  return Array.from(result.values());
 }
 
-let strings = [
-  "кришна",
-  "кришна",
-  "харе",
-  "харе",
-  "харе",
-  "харе",
-  "кришна",
-  "кришна",
-  ":-O"
-];
-
-console.log(unique(strings)); // кришна, харе, :-O
+console.log(aclean(arr));
