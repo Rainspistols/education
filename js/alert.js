@@ -1,18 +1,18 @@
-"use strict";
+let ladder = {
+  step: 0,
 
-let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    console.log(this.step);
+    return this;
+  },
+};
 
-function aclean(arr) {
-  let result = new Map();
-  for (let str of arr) {
-    let newProp = str
-      .toLowerCase()
-      .split("")
-      .sort()
-      .join("");
-    result.set(newProp, str);
-  }
-  return Array.from(result.values());
-}
-
-console.log(aclean(arr));
+ladder.up().up().down().showStep().down().down().down().showStep(); // 1
